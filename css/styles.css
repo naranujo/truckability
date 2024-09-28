@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;1000&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Cambiado a columna para el botón */
+    height: 100vh;
+    overflow: hidden; /* Para ocultar el desbordamiento */
+    margin: 0; /* Eliminar margen por defecto */
+    background-color: #181C26;
+    position: relative; /* Para el posicionamiento de los elementos hijos */
+}
+
+#wheel {
+    width: 100px; /* Ancho de la rueda */
+    position: absolute; /* Hacer que la rueda sea absoluta */
+    z-index: 1; /* Colocar la rueda encima del telón */
+}
+
+#telon {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: 50px;
+    width: calc(100vw - 100px);
+    height: 100px;
+    background-color: #181C26;
+    z-index: 0; /* Colocar el telón detrás de la rueda */
+}
+
+#gifContainer {
+    display: none; /* Ocultar el contenedor del GIF inicialmente */
+    z-index: 0;
+}
+
+#text {
+    position: absolute;
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar el centro */
+    font-size: 96px; /* Tamaño del texto */
+    color: white; /* Color del texto */
+    white-space: nowrap; /* Evitar el salto de línea */
+    z-index: -1; /* Mantener el texto detrás de la rueda */
+    opacity: 0.8; /* Leve transparencia para que se integre mejor */
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    color: #D9965B;
+    letter-spacing: 0.03em; /* Espacio entre letras */
+}
+
+#startButton {
+    margin-top: 20px; /* Espaciado del botón */
+    padding: 10px 20px; /* Relleno del botón */
+    font-size: 16px; /* Tamaño de la fuente del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    background-color: #D9965B; /* Color del fondo del botón */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 2; /* Colocar el botón encima de los demás elementos */
+    position: absolute; /* Hacer que el botón sea absoluto */
+    bottom: 200px; /* Colocar el botón en la parte inferior */
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+#arrowIcon {
+    margin-left: 5px; /* Espaciado del ícono */
+    width: 16px; /* Ancho del ícono */
+    height: 16px; /* Alto del ícono */
+    display: none; /* Ocultar el ícono inicialmente */
+}
